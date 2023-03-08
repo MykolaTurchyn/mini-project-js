@@ -12,8 +12,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
                 Name: ${user.name}`
             btn.innerText = 'details';
 
-            p.appendChild(btn);
             div.appendChild(p);
+            p.appendChild(btn);
             bodyFromUi.appendChild(div);
 
             btn.onclick = () => {

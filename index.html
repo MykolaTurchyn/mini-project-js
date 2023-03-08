@@ -5,13 +5,51 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        /*всі блоки з user - по 2 в рядок.
+        /* кнопки/аосилвння розташувати під інформацією про user.*/
+
+        body {
+            background: linear-gradient(blue, yellow);;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-evenly;
+        }
+
+        div {
+            display: flex;
+            width: 45%;
+            height: 100px;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        div > p {
+            display: flex;
+            /*border: 1px solid black;*/
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div > p > button {
+            width: 100px;
+            height: 30px;
+        }
+
+        div > p > button:hover {
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 15px;
+        }
+
+
+    </style>
 </head>
 <body>
-
-
-
-
-
 
 
 <script src="main.js"></script>
