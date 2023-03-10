@@ -25,7 +25,8 @@ company.innerText = `Company: ${user.company.name}`;
 
 btn.innerText = 'post of this user';
 div.append(id, name, username, email, address, phone, website, company, btn);
-bodyUi.appendChild(div);
+div.className = 'user'
+bodyUi.append(div);
 
 btn.onclick = () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
@@ -37,12 +38,15 @@ btn.onclick = () => {
                 let btn2 = document.createElement('button');
 
                 title.innerText = `Title${post.id}: ${post.title}`;
-                title.appendChild(btn2);
+
 
                 btn2.innerText = 'info of this post'
 
-                postDiv.appendChild(title);
-                div.appendChild(postDiv);
+                postDiv.append(title,btn2);
+
+                bodyUi.appendChild(postDiv);
+                postDiv.className = 'post'
+
                 btn2.onclick = () => {
                     localStorage.setItem('post', JSON.stringify(post));
                     window.location.href = 'post-details.html';

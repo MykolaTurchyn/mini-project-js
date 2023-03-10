@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             btn.innerText = 'details';
 
             div.appendChild(p);
-            p.appendChild(btn);
+            div.appendChild(btn);
             bodyFromUi.appendChild(div);
 
             btn.onclick = () => {
