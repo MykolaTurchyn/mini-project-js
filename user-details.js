@@ -38,18 +38,18 @@ btn.onclick = () => {
                 let btn2 = document.createElement('button');
 
                 title.innerText = `Title${post.id}: ${post.title}`;
-
-
                 btn2.innerText = 'info of this post'
-
                 postDiv.append(title,btn2);
-
                 bodyUi.appendChild(postDiv);
                 postDiv.className = 'post'
+                btn.disabled = true
+
 
                 btn2.onclick = () => {
                     localStorage.setItem('post', JSON.stringify(post));
                     window.location.href = 'post-details.html';
+                    btn.disabled = true
+
                 }
             }
         });
