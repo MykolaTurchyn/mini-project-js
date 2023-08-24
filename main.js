@@ -6,7 +6,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let div = document.createElement('div');
             let p = document.createElement('p');
             let btn = document.createElement('button');
-
+          
             p.innerText =
                 `Id: ${user.id},
                 Name: ${user.name}`
@@ -23,3 +23,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
         }
 
     });
+
+
